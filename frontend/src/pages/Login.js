@@ -24,7 +24,7 @@ export default function Login({ handleLogin }) {
             setMessage('Password must contain at least 8 characters');
         } else {
             try {
-                const response = await axios.post(`http://localhost:8000/api/v1/login`, {
+                const response = await axios.post(`${process.env.REACT_APP_API_URL}/login`, {
                     email,
                     password
                 });
@@ -70,7 +70,7 @@ export default function Login({ handleLogin }) {
                 <button type="submit" className="btn btn-primary">Login</button>
                 <hr />
                 <div className="link">
-                    <Link to="/register">I don't have an account</Link>
+                    <Link to="/signup">I don't have an account</Link>
                 </div>
             </form>
         </div>

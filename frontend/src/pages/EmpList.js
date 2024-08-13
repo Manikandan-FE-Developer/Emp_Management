@@ -18,7 +18,7 @@ export default function EmpList() {
     useEffect(() => {
         async function fetchEmployees() {
             try {
-                const response = await axios.get('http://localhost:8000/api/v1/employees');
+                const response = await axios.get(`${process.env.REACT_APP_API_URL}/employees`);
                 setEmployees(response.data);
             } catch (error) {
                 setError('Failed to fetch employees');
@@ -37,7 +37,7 @@ export default function EmpList() {
 
     const handleDelete = async (id) => {
         try {
-            await axios.delete(`http://localhost:8000/api/v1/employee/${id}`);
+            await axios.delete(`${process.env.REACT_APP_API_URL}/employee/${id}`);
             setEmployees(employees.filter(emp => emp._id !== id));
             setError('Employee deleted successfully');
         } catch (error) {
@@ -69,7 +69,7 @@ export default function EmpList() {
     const handleFormSubmit = async (e) => {
         e.preventDefault();
         try {
-            await axios.put(`http://localhost:8000/api/v1/employee/${selectedEmp._id}`, editForm);
+            await axios.put(`${process.env.REACT_APP_API_URL}/employee/${selectedEmp._id}`, editForm);
             setEmployees(employees.map(emp => (emp._id === selectedEmp._id ? { ...emp, ...editForm } : emp)));
             setSelectedEmp(null);
             setError('Employee updated successfully');

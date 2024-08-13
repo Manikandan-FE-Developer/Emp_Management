@@ -5,7 +5,7 @@
 }
 /* Nav Bar */
 nav {
-  background-color: #172332;
+  background-color: #1b525d;
 }
 .navMenu {
   display: none;
@@ -22,12 +22,12 @@ nav {
   width: 40px;
   margin-top: -10px;
 }
-.navUser, .navLogout, .navLogin, .navSignup, .navEmpList{
+.navUser, .navLogout, .navLogin, .navSignup {
   margin-top: 10px;
 }
-.navEmpName{
+.navEmpName, .navEmpList{
   color: white;
-  margin-top: 10px;
+  margin-top: 15px;
 }
 .navEmpList a{
   color: white;
@@ -40,7 +40,7 @@ nav {
   width: 80px;
   padding: 5px;
   color: white;
-  background-color: rgb(0, 213, 255);
+  background-color: rgb(48, 185, 50);
   border-radius: 5px;
   border-style: none;
 }
@@ -62,32 +62,32 @@ nav {
   background-color: red;
 }
 
-/* Login, Signup, CreateEmp Page */
+/* Login, Signup & CreateEmp Page */
 .login-container, .signup-container, .createEmp-container{
   display: flex;
   justify-content: center;
   align-items: center;
   height: 80vh;
 }
-.login, .signup, .create{
+.login, .signup, .createEmp{
   padding: 20px;
   border-radius: 10px;
   box-shadow: 0px 0px 15px rgb(179, 169, 169);
 }
-.login h2, .signup h2, .create h2{
+.login h2, .signup h2, .createEmp h2{
   text-align: center;
   margin: 0;
   padding: 10px 0px;
 }
-.login input, .signup input, .create input{
+.login input, .signup input, .createEmp input{
   width: 300px;
 }
-.login .error, .signup .error, .create .error{
+.login .error, .signup .error, .createEmp .error{
   color: red;
   text-align: center;
   font-weight: bold;
 }
-.login button, .signup button, .create button{
+.login button, .signup button, .createEmp button{
   width: 100%;
   margin: 10px 0px;
 }
@@ -100,92 +100,10 @@ nav {
   justify-content: center;
   margin-top: 10px;
 }
-/* Home page & Profile page*/
+/* Home page*/
 .welcome-container{
   margin-top: 150px;
   text-align: center;
-}
-.profile-container {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-.profile{
-  width: 400px;
-  height: 450px;
-  border-radius: 10px;
-  text-align: center;
-  box-shadow: 0px 0px 15px rgb(179, 169, 169);
-  position: relative;
-  display: inline-block;
-}
-.profile h2{
-  text-align: center;
-  margin: 0;
-  padding: 10px 0px;
-}
-.profile .editIcon{
-  position: absolute;
-  top: 15px;
-  right: 15px;
-  font-size: 20px;
-  cursor: pointer;
-}
-.profile img{
-  width: 100px;
-}
-.profile-pic-container {
-  position: relative;
-  display: inline-block;
-  width: 100%;
-}
-.profile-pic-container .form-group{
-  width: 70%;
-  margin-left: 60px;
-}
-.profile-pic {
-  border-radius: 50%;
-  width: 100px;
-  height: 100px;
-  object-fit: cover;
-}
-.profile .fa-camera {
-  position: absolute;
-  top: 70px;
-  right: 160px;
-  font-size: 15px;
-  color: #fff;
-  background-color: #000;
-  border-radius: 50%;
-  padding: 5px;
-  cursor: pointer;
-}
-.profile #file-input {
-  display: none;
-}
-.profile .userDetails{
-  width: 70%;
-  margin-left: 30px;
-}
-.profile .userDetails hr{
-  width: 100%;
-  border: 1px solid rgba(114, 107, 107, 0.555);
-  margin: 5px;
-}
-.profile .flex{
-  display: flex;
-  justify-content: left;
-  padding: -60px;
-}
-.profile .flex label{
-  font-size: 20px;
-  padding: 0 40px;
-}
-.profile .flex .name{
-  font-size: 20px;
-}
-.profile .error{
-  color: red;
 }
 /* Employee List */
 .empList .head{
@@ -239,10 +157,6 @@ nav {
   font-size: 35px;
   cursor: pointer;
 }
-.popup form label{
-  text-align: left;
-  padding: 0 5px;
-}
 .popup form div{
   padding: 5px;
 }
@@ -253,8 +167,6 @@ nav {
   padding: 5px 35px;
   text-align: center;
 }
-/* Create Employee */
-
 /* Mobile Responsive */
 @media only screen and (max-width: 768px) {
   .Toastify__toast-container {
@@ -321,42 +233,37 @@ nav {
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
     z-index: 10;
   }
-  /* Login & Signup page */
-  .login, .signup{
+  /* Login, Signup & CreateEmp page */
+  .login, .signup, .createEmp{
     width: 90%;
     height: 100%;
     box-shadow: none;
   }
-  .login input, .login button, .signup input, .signup button{
+  .login input, .login button, .signup input, .signup button,.createEmp input, .createEmp button{
     width: 100%;
   }
-  /* Home page & Profile page*/
+  /* Home page*/
   .welcome-container h1{
     font-size: 20px;
   }
-  .profile{
-    width: 100%;
-    height: 100%;
-    text-align: center;
-    box-shadow: none;
+  /* Create Employee */
+  .createEmp h2{
+    font-size: 25px;
+    margin-top: -45px;
   }
-  .profile-pic-container .form-group{
-    width: 70%;
-    margin-left: 50px;
+  /* Employee List */
+  .empList .head p{
+    font-size: 12px;
+    margin: 0 5px 0 0;
   }
-  .profile .fa-camera {
+  .empList .head button{
+    font-size: 10px;
+    margin-right: -20px;
+  }
+  .popup {
     position: absolute;
-    top: 70px;
-    right: 110px;
   }
-  .profile .userDetails{
-    width: 100%;
-    margin-left: 0;
-  }
-  .profile .flex label{
-    font-size: 18px;
-  }
-  .profile .flex .name{
-    font-size: 18px;
+  .popup h2{
+    font-size: 20px;
   }
 }

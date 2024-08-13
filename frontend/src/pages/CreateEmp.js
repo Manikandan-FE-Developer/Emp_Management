@@ -23,7 +23,7 @@ export default function CreateEmp(){
             setMessage("Please fill in all fields");
         } else{
             try {
-                const response = await axios.post(`http://localhost:8000/api/v1/employee`, {
+                const response = await axios.post(`${process.env.REACT_APP_API_URL}/employee`, {
                     name,
                     email,
                     mobile,
@@ -55,7 +55,7 @@ export default function CreateEmp(){
 
     return(
         <div className="createEmp-container">
-            <form className="create" onSubmit={CreateEmp}>
+            <form className="createEmp" onSubmit={CreateEmp}>
                 <h2>Create Employee</h2>
                 <div className="form-group">
                     <input type="text" className="form-control" placeholder="Name"

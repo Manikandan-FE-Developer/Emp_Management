@@ -69,7 +69,7 @@ export default function Header({ authenticated, handleLogout, firstname }) {
                     ) : (
                         <>
                             <Link to="/login" onClick={closeMenu}><i className="fa fa-sign-in"></i> Login</Link>
-                            <Link to="/register" onClick={closeMenu}><i className="fa fa-user-plus"></i> Signup</Link>
+                            <Link to="/signup" onClick={closeMenu}><i className="fa fa-user-plus"></i> Signup</Link>
                         </>
                     )}
                 </div>

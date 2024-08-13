@@ -29,7 +29,7 @@ export default function Signup({ handleLogin }) {
             setMessage("Passwords do not match");
         } else {
             try {
-                const response = await axios.post(`http://localhost:8000/api/v1/register`, {
+                const response = await axios.post(`${process.env.REACT_APP_API_URL}/register`, {
                     firstname,
                     lastname,
                     email,
