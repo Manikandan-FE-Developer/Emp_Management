@@ -68,7 +68,7 @@ This is an Employee Management System built using React for the frontend and Nod
 The backend provides the following API endpoints:
 
 - **GET /api/v1/employees:** Get a list of all employees.
-- **POST /api/v1/employees:** Add a new employee.
+- **POST /api/v1/employee:** Add a new employee.
 - **PUT /api/v1/employee/:id:** Update an existing employee.
 - **DELETE /api/v1/employee/:id:** Delete an employee.
 
