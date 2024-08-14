@@ -89,8 +89,8 @@ export default function CreateEmp(){
                     <input type="file" className="form-control" 
                     onChange={(e) => setFile(e.target.files[0])}/>
                 </div>
-                <button type="submit" className="btn btn-primary">Submit</button>
                 <p className="error">{message}</p>
+                <button type="submit" className="btn btn-primary">Submit</button>
             </form>
         </div>  
     );
