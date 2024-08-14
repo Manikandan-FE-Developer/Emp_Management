@@ -31,7 +31,7 @@ function App() {
   };
 
   const handleLogout = () => {
-    toast.success('Logout Successful');
+    toast.error('Logout Successful');
     localStorage.removeItem("user");
     setAuthenticated(false);
     setUser({ firstname: '', lastname: '', email: '', password: '' });

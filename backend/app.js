@@ -17,7 +17,7 @@ app.use(cors());
 app.use('/api/v1/', userRoutes);
 
 app.get("/", (req, res) => {
-    res.send("<h1>User Profile Website...</h1>");
+    res.send("<h1>Employee Management System</h1>");
 })
 
 app.listen(process.env.PORT, () => { 
