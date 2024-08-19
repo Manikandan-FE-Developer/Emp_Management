@@ -4,7 +4,6 @@ export default function Home({ user }) {
     const [isLoggedIn, setIsLoggedIn] = useState(false);
 
     useEffect(() => {
-        // Check if the user object is valid to determine login status
         if (user && user.firstname && user.lastname) {
             setIsLoggedIn(true);
         } else {
